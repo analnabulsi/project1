@@ -14,36 +14,67 @@
         <p>Guess the Number of Balls and Win Exciting Prizes!</p>
       </header>
 
-      <main>
-        <form id="guessForm">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input
-            type="text"
-            name="mobile"
-            placeholder="Mobile Number"
-            required
-          />
-          <input type="text" name="guess" placeholder="Your Guess" required />
-          <p class="acknowledgement" id="ack"></p>
-          <label for="subscribe">
-          <input
-            type="checkbox"
-            id="subscribe"
-            name="newsletter"
-            value="subscribed"
-          />
-        </label>
-        <small
-          >The information collected in this form will be used solely to process
-          your submission for the Dubai Duty Free Tennis “Guess the Number of
-          Balls” competition. It will be accessible only to authorized personnel
-          who require it to administer the competition and maintain the system.
-          All data will be handled in accordance with the Dubai Duty Free
-          Privacy Policy <a href="#">privacy policy </a>.
-        </small>
-          <button type="submit">Submit</button>
-        </form>
+      <main>    <form id="guessForm" novalidate>
+  <input 
+    type="text" 
+    name="name" 
+    id="name"
+    placeholder="Name" 
+    required 
+    pattern="^[A-Za-z\s]+$"
+    title="Name should contain only letters and spaces"
+  />
+
+  <input 
+    type="email" 
+    name="email" 
+    id="email"
+    placeholder="Email" 
+    required 
+  />
+
+  <input
+    type="tel"
+    name="mobile"
+    id="mobile"
+    placeholder="Mobile Number"
+    required
+    pattern="^(\+971|0)?5[0-9]{8}$"
+    title="Enter a valid UAE mobile number (e.g., 0501234567 or +971501234567)"
+  />
+
+  <input 
+    type="text" 
+    name="guess" 
+    id="guess"
+    placeholder="Your Guess" 
+    required 
+  />
+
+  <!-- Acknowledgement Checkbox Same Line -->
+  <label style="display:flex; align-items:center; gap:8px; margin-top:10px;">
+    <input
+      type="checkbox"
+      id="acknowledge"
+      required
+    />
+    <span>
+      I acknowledge that the information collected will be used to process my submission.
+    </span>
+  </label>
+
+  <small>
+    The information collected in this form will be used solely to process
+    your submission for the Dubai Duty Free Tennis “Guess the Number of
+    Balls” competition. It will be accessible only to authorized personnel
+    who require it to administer the competition and maintain the system.
+    All data will be handled in accordance with the Dubai Duty Free
+    Privacy Policy <a href="#">privacy policy</a>.
+  </small>
+
+  <button type="submit">Submit</button>
+</form>
+
 
       </main>
     </div>
