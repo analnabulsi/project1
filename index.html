@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+      <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <!-- Replace with real logo -->
+        <img src="DDF.jpg" alt="Logo" />
+        <span>Dubai Duty Free Tennis</span>
+      </div>
+
+     <!-- <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Competition</a></li>
+        <li><a href="#">Prizes</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>-->
+  </nav>
+    
     <div class="container">
       <header>
         <h1>Dubai Duty Free Tennis Championships</h1>
@@ -14,39 +32,77 @@
         <p>Guess the Number of Balls and Win Exciting Prizes!</p>
       </header>
 
-      <main>
-        <form id="guessForm">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input
-            type="text"
-            name="mobile"
-            placeholder="Mobile Number"
-            required
+      <main> 
+        <form id="guessForm" novalidate>
+          <input 
+            type="text" 
+            name="name" 
+            id="name"
+            placeholder="Name" 
+            required 
+            pattern="^[A-Za-z\s]+$"
+            title="Name should contain only letters and spaces"
           />
-          <input type="text" name="guess" placeholder="Your Guess" required />
-          <button type="submit">Submit</button>
-          <p class="acknowledgement" id="ack"></p>
-        </form>
-        <label for="subscribe">
+
+        <input 
+          type="email" 
+          name="email" 
+          id="email"
+          placeholder="Email" 
+          required 
+        />
+      
+        <input
+          type="tel"
+          name="mobile"
+          id="mobile"
+          placeholder="Mobile Number"
+          required
+          pattern="^(\+971|0)?5[0-9]{8}$"
+          title="Enter a valid UAE mobile number (e.g., 0501234567 or +971501234567)"
+        />
+      
+        <input 
+          type="number" 
+          name="guess" 
+          id="guess"
+          placeholder="Your Guess" 
+          required 
+        />
+      
+        <!-- Acknowledgement Checkbox Same Line -->
+        <label style="display:flex; align-items:flex-start; gap:8px; margin-top:10px; line-height:1.4;">
           <input
             type="checkbox"
-            id="subscribe"
-            name="newsletter"
-            value="subscribed"
+            id="acknowledge"
+            required
           />
-        </label>
-        <small
-          >The information collected in this form will be used solely to process
-          your submission for the Dubai Duty Free Tennis “Guess the Number of
-          Balls” competition. It will be accessible only to authorized personnel
+          <span>
+          The information collected in this form will be used solely to process
+          your submission for the xxxxxxxx “Guess the Number of
+          Balls” competition. It will be accessible only to authorized personel
           who require it to administer the competition and maintain the system.
-          All data will be handled in accordance with the Dubai Duty Free
-          Privacy Policy <a href="#">privacy policy </a>.
-        </small>
+          All data will be handled in accordance with the xxxxxxxx
+          Privacy Policy <a href="#">privacy policy</a>. </span>
+        </label>
+
+
+        <button type="submit">Submit</button>
+    </form>
+
+
       </main>
     </div>
-
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 Dubai Duty Free Tennis. All Rights Reserved.</p>
+      <div class="social-icons">
+     
+      </div>
+    </div>
+  </footer>
+    
     <script src="script.js"></script>
   </body>
 </html>
