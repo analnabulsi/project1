@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dubai Duty Free Tennis - Guess the Balls</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Dubai Duty Free Tennis Championships</h1>
+        <img src="IMG_1792.jpg" alt="guess the ball" id="tennis" />
+        <p>Guess the Number of Balls and Win Exciting Prizes!</p>
+      </header>
+
+      <main>
+        <form id="guessForm">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="text"
+            name="mobile"
+            placeholder="Mobile Number"
+            required
+          />
+          <input type="text" name="guess" placeholder="Your Guess" required />
+          <button type="submit">Submit</button>
+          <p class="acknowledgement" id="ack"></p>
+        </form>
+        <label for="subscribe">
+          <input
+            type="checkbox"
+            id="subscribe"
+            name="newsletter"
+            value="subscribed"
+          />
+        </label>
+        <small
+          >The information collected in this form will be used solely to process
+          your submission for the Dubai Duty Free Tennis “Guess the Number of
+          Balls” competition. It will be accessible only to authorized personnel
+          who require it to administer the competition and maintain the system.
+          All data will be handled in accordance with the Dubai Duty Free
+          Privacy Policy <a href="#">privacy policy </a>.
+        </small>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
