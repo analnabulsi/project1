@@ -56,10 +56,10 @@
 
       <main>
         <form id="guessForm">
-          <input type="text" name="name" placeholder="Name" required pattern="^[A-Za-z\s]+$" />
+          <input type="text" name="name" placeholder="Name" required pattern="^[A-Za-z\s]+$" title="Name should contain only letters and spaces"/>
           <input type="email" name="email" placeholder="Email" required />
-          <input type="tel" name="mobile" placeholder="Mobile Number" required pattern="^(\+971|0)?5[0-9]{8}$" />
-          <input type="number" name="guess" placeholder="Your Guess" required min="1" />
+          <input type="tel" name="mobile" placeholder="Mobile Number" required pattern="^(\+971|0)?5[0-9]{8}$" title="Enter a valid UAE mobile number (e.g., 0501234567 or +971501234567)"/>
+          <input type="number" name="guess" placeholder="Your Guess" required min="1" title="Please enter a number greater than 0"/>
           <label style="font-size: 12px; display: flex; align-items: flex-start; gap: 8px;">
             <input type="checkbox" required> <span>I acknowledge that the information collected in this form will be used solely to process
               the submission for the “Guess the Number of Balls” competition. 
